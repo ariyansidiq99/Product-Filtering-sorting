@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Fileter</title>
+    <link rel="stylesheet" href="ProductFileter.css">
+</head>
+<body>
+    <div class="controls">
+        <button class="filter-btn is-active" data-category="all" >All</button>
+        <button class="filter-btn" data-category="tech">Tech</button>
+        <button class="filter-btn" data-category="furniture">Furniture</button>
+        <button class="filter-btn" data-category="accessories">Accessories</button>
+        <select id="sortSelect">
+            <option value="default">Sort: Default</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name-asc">Name: A-Z</option>
+        </select>
+        <label class="price-label">Max price: $<span id="priceVal">1000</span></label>
+        <input type="range" id="priceRange" min="0" max="1000" value="1000" step="50">
+    </div>
+    <p class="results" id="results"></p>
+    <div class="grid" id="productGrid"></div>
+    <p class="no-result" id="noResults" style="display: none;">No Products match your filters</p>
+    <script src="ProductFileter.js"></script>
+</body>
+</html>
